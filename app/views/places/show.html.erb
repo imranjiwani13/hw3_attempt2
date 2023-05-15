@@ -1,0 +1,14 @@
+<h1><%= @place.name %></h1>
+
+<%= link_to 'New Post', new_place_post_path(@place) %>
+
+<ul>
+  <% @place.posts.each do |post| %>
+    <li>
+      <h2><%= post.title %></h2>
+      <p><%= post.description %></p>
+      <p><%= post.date %></p>
+    </li>
+  <% end %>
+</ul>
+
